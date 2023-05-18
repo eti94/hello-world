@@ -1,0 +1,24 @@
+pipeline {
+ agent any
+ stages {
+  stage ('Start')
+   {
+   steps {
+    echo "Start stage"
+	}
+   }
+   stage ('mid')
+   {
+   steps {
+    input ('Do you want to proceed')
+	   }
+   }
+   stage('End')
+   {
+   steps {
+   echo {'you proceeded' cycle completed. thanks')
+   }
+   }
+   
+ }
+}
